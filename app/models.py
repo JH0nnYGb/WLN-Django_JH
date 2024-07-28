@@ -21,6 +21,7 @@ class Ingrediente(models.Model):
     def __str__(self):
         return self.nomeIngrediente
     
+    
 
 class Receita(models.Model):
     #CHOICES

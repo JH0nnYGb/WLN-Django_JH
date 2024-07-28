@@ -100,7 +100,7 @@
     
                     <div class="box-2">
                         <table>
-                            <thead>
+                            <thead class="titulo">
                                 <tr>
                                     <th>INGREDIENTE</th>
                                     <th>ENERGIA</th>
@@ -112,7 +112,7 @@
                                     <th>GORDURAS SATURADAS</th>
                                     <th>GORDURAS TRANS</th>
                                     <th>FIBRA</th>
-                                    <th>SÓDIO</th>
+                                    <th data-no-sticky >SÓDIO</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -127,8 +127,13 @@
                                         <th> {{ingrediente.gordTotais}} g</th>
                                         <th> {{ingrediente.gordSaturadas}} g</th>
                                         <th> {{ingrediente.gordTrans}} g</th>
-                                        <th> {{ingrediente.fibra}} g</th>
-                                        <th> {{ingrediente.sodio}} mg</th>
+                                        <th > {{ingrediente.fibra}} g</th>
+                                        <th > {{ingrediente.sodio}} mg</th>
+                                        <th class="th-imagemBtn">
+                                            <a class="btn-editar" href="editaringrediente/{{ingrediente.id}}">
+                                                <input type="image" value="{{ingrediente.id}}" src="{% static 'img/btn-editar.png'%}" alt="erro" id="imagem_editar">    
+                                            </a>
+                                        </th>
                                     </tr>
                                 {% endfor %}
                             </tbody>
